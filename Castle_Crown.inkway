@@ -13,7 +13,7 @@
     ],
     "playMode": "parser",
     "startRoom": "room_start",
-    "modified": "2026-11-10T20:35:48.993Z",
+    "modified": "2026-11-10T21:02:25.847Z",
     "created": "2026-11-10T20:33:16.743Z"
   },
   "settings": {
@@ -474,6 +474,67 @@
       "appliesTo": "none",
       "outOfWorld": true,
       "meta": true
+    },
+    {
+      "id": "verb_1",
+      "canonical": "pull",
+      "synonyms": [
+        "pull",
+        "Pull"
+      ],
+      "grammar": "verb [noun]",
+      "appliesTo": "item",
+      "requiresReachable": true
+    },
+    {
+      "id": "verb_2",
+      "canonical": "chop",
+      "synonyms": [
+        "chop"
+      ],
+      "grammar": "verb [noun]",
+      "appliesTo": "item",
+      "requiresReachable": true
+    },
+    {
+      "id": "verb_3",
+      "canonical": "tie",
+      "synonyms": [
+        "tie"
+      ],
+      "grammar": "verb [noun]",
+      "appliesTo": "item",
+      "requiresReachable": true
+    },
+    {
+      "id": "verb_4",
+      "canonical": "swing",
+      "synonyms": [
+        "swing"
+      ],
+      "grammar": "verb [noun]",
+      "appliesTo": "item",
+      "requiresReachable": true
+    },
+    {
+      "id": "verb_5",
+      "canonical": "jump",
+      "synonyms": [
+        "jump"
+      ],
+      "grammar": "verb [noun]",
+      "appliesTo": "item",
+      "requiresReachable": true
+    },
+    {
+      "id": "verb_6",
+      "canonical": "feed",
+      "synonyms": [
+        "feed"
+      ],
+      "grammar": "verb [noun]",
+      "appliesTo": "item",
+      "requiresReachable": true
     }
   ],
   "directions": [
@@ -612,7 +673,7 @@
       "kind": "resource",
       "min": 0,
       "max": null,
-      "default": 20,
+      "default": 7,
       "hud": true,
       "label": "HP"
     },
@@ -620,7 +681,7 @@
       "id": "stat_maxHp",
       "name": "maxHp",
       "kind": "attribute",
-      "default": 20
+      "default": 7
     },
     {
       "id": "stat_attack",
@@ -635,7 +696,19 @@
       "default": 1
     }
   ],
-  "statusDefs": [],
+  "statusDefs": [
+    {
+      "id": "status_1",
+      "name": "status_1.name",
+      "kind": "dot",
+      "duration": 7,
+      "statMods": {},
+      "tick": {
+        "stat": "hp",
+        "amount": "-1"
+      }
+    }
+  ],
   "lootTables": [],
   "asciiArt": [],
   "themes": [],
@@ -700,6 +773,10 @@
     },
     "dir.out": {
       "en": "out"
+    },
+    "status_1.name": {
+      "en": "Soaked"
     }
-  }
+  },
+  "dialogues": []
 }
